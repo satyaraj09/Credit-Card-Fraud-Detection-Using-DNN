@@ -36,21 +36,20 @@ This project demonstrates building a Deep Neural Network (DNN) to detect credit 
   Class weights: {0: 0.50, 1: 289.14}
   ```
 
-````
-
 ---
 
 ### 4. Model Architecture
 
-* **Input layer:** 30 features
-* **Hidden layers:**
+- **Input layer:** 30 features
+- **Hidden layers:**
 
-  * Dense(32, ReLU) + Dropout(0.3)
-  * Dense(16, ReLU) + Dropout(0.2)
-* **Output layer:** Dense(1, Sigmoid)
-* **Loss function:** Binary Crossentropy
-* **Optimizer:** Adam
-* **Metric:** AUC
+  - Dense(32, ReLU) + Dropout(0.3)
+  - Dense(16, ReLU) + Dropout(0.2)
+
+- **Output layer:** Dense(1, Sigmoid)
+- **Loss function:** Binary Crossentropy
+- **Optimizer:** Adam
+- **Metric:** AUC
 
 **Total parameters:** 1,537
 
@@ -58,47 +57,47 @@ This project demonstrates building a Deep Neural Network (DNN) to detect credit 
 
 ### 5. Training
 
-* **Epochs:** 50
-* **Batch size:** 2048
-* **Early stopping** on validation loss (patience=5)
-* **Validation split:** 20% of training data
+- **Epochs:** 50
+- **Batch size:** 2048
+- **Early stopping** on validation loss (patience=5)
+- **Validation split:** 20% of training data
 
 **Training Results:**
 
-* Best **ROC-AUC**: ~0.9765
-* High **Recall** on fraud cases: 0.89
-* Precision-Recall AUC: ~0.608
+- Best **ROC-AUC**: ~0.9765
+- High **Recall** on fraud cases: 0.89
+- Precision-Recall AUC: ~0.608
 
 ---
 
 ### 6. Evaluation
 
-* **Confusion Matrix** and **Classification Report**
-* **ROC-AUC** and **Precision-Recall curves**
-* **SHAP** for model interpretability (feature importance)
+- **Confusion Matrix** and **Classification Report**
+- **ROC-AUC** and **Precision-Recall curves**
+- **SHAP** for model interpretability (feature importance)
 
 ---
 
 ### 7. Saving the Model
 
-* Model: `credit_card_detection.h5`
-* Scaler: `scaler.pkl`
+- Model: `credit_card_detection.h5`
+- Scaler: `scaler.pkl`
 
 ---
 
 ### 8. Key Observations
 
-* Extreme class imbalance requires **class weighting** or oversampling techniques.
-* Model achieves high recall but low precision on fraud cases.
-* SHAP highlights which features contribute most to fraud detection.
+- Extreme class imbalance requires **class weighting** or oversampling techniques.
+- Model achieves high recall but low precision on fraud cases.
+- SHAP highlights which features contribute most to fraud detection.
 
 ---
 
 ### 9. Future Improvements
 
-* Use **SMOTE** or **ADASYN** for synthetic oversampling
-* Explore **ensemble models** (XGBoost, LightGBM)
-* Fine-tune **hyperparameters** for better precision
+- Use **SMOTE** or **ADASYN** for synthetic oversampling
+- Explore **ensemble models** (XGBoost, LightGBM)
+- Fine-tune **hyperparameters** for better precision
 
 ---
 
@@ -123,6 +122,5 @@ python evaluate_model.py
 
 ### 11. References
 
-* Kaggle Dataset: [Credit Card Fraud Detection](https://www.kaggle.com/mlg-ulb/creditcardfraud)
-* SHAP Documentation: [https://shap.readthedocs.io](https://shap.readthedocs.io)
-````
+- Kaggle Dataset: [Credit Card Fraud Detection](https://www.kaggle.com/mlg-ulb/creditcardfraud)
+- SHAP Documentation: [https://shap.readthedocs.io](https://shap.readthedocs.io)
